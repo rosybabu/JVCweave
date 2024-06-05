@@ -1,0 +1,232 @@
+.contact__container {
+    background-color: #EDE9DF;
+    @include tablet{
+        padding: 50px 0px 0px 0px;
+    }
+}
+.contact__details {
+    width: 50%;
+    @include tablet{
+        width: 100%;}
+}
+.contact__containerwrap {
+    width: 77%;
+    margin: 0 auto;
+    padding: 100px 0px;
+@include tablet{
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+    .contact__title {
+        width: 50%;
+        color: #362126;
+        font-family: $neue-font;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 100px;
+        /* 125% */
+        letter-spacing: -0.8px;
+        text-transform: capitalize;
+        @include tablet{
+            width: 100%;
+            font-size: 60px;
+        }
+    }
+}
+    .contact__form {
+        width: 50%;
+        @include tablet{
+            width: 100%;}
+    }
+.wd-50{
+    margin: 0 6px;
+    @include tablet{
+        width: 100%;
+    }
+}
+.wd-50{
+    margin: 0 6px;
+}
+select,select.error {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #362126;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #362126;
+    padding: 0px;
+    font-family: $arial-font;
+}
+
+option {
+    color: $color-black;
+}
+
+.input-parent {
+    position: relative;
+}
+
+input,
+textarea {
+    display: inline-block;
+    background: transparent !important;
+    border: 0;
+    border-bottom: 1px solid #362126;
+    box-shadow: none;
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    text-transform: capitalize;
+    color: var(--d-9-d-9-d-9, #362126);
+    font-family: $arial-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; 
+}
+textarea ~ label.error{
+    position: initial;
+}
+input:focus+.form-label,
+input.has-value+.form-label
+ {
+    top: 5px;
+    font-size: 14px;
+}
+textarea:focus+.form-label,
+textarea.has-value+.form-label{
+    font-size: 14px;
+    top: -15px;
+}
+.group{
+    position: relative;
+    margin-bottom: 20px;
+}
+label.error{
+    top: auto !important;
+}
+select ~ label{
+    position: initial;
+}
+.msgBox textarea:focus~.form-label,
+.msgBox textarea.has-value~.form-label,.msgBox textarea:valid~label {
+    top: -15px;
+}
+.msgBox .form-label{
+    top: 35px;
+}
+input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input {
+    background: none;
+    font-size: 16px;
+    display: block;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #362126;
+    height: auto;
+    padding: 0px !important;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -10px;
+    font-size: 10px;
+    color: #362126;
+}
+
+// input:focus~.bar:before {
+//     width: 320px;
+// }
+
+label {
+    color: var(--d-9-d-9-d-9, #362126);
+    font-family: $arial-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 214.286% */
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 10px;
+    transition: 300ms ease all;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 320px;
+}
+
+.bar:before {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #242935;
+    transition: 300ms ease all;
+    left: 0;
+}
+
+.wd-50 {
+    width: 47%;
+    float: left;
+    @include tablet{
+        width: 100%;
+    }
+}
+.contact__row{
+@include tablet{
+    flex-wrap: wrap;
+}
+}
+.wd-100 {
+    width: 100%;
+    clear: both;
+}
+.submit__btn {
+    border: 1px solid $color-lightblack;
+    border-radius: 30px;
+    float: right;
+    color: var(--d-9-d-9-d-9, #362126);
+text-align: center;
+font-family: $area-font;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; /* 183.333% */
+letter-spacing: 0.96px;
+text-transform: uppercase;
+padding: 3px 30px !important;
+    @include tablet{
+        float: none;
+    }
+}
+a.backtotop {
+    color: var(--d-9-d-9-d-9, #362126);
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 216.667% */
+    padding-bottom: 56px;
+    display: block;
+    @include tablet{
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}

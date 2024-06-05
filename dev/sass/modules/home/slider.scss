@@ -1,0 +1,31 @@
+
+.slider__container{
+    position: relative;
+    .slider__single img{
+        height:700px;
+        width:100%;
+        object-fit: cover;
+        @include tablet{
+            height: 400px;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 30px !important;
+        li {
+            width: 13px;
+            height: 13px;
+            background: #ede9df;
+            border-radius: 50%;
+            margin: 0px 6px;
+            padding: 0px;
+            opacity: 0.8;
+        }
+        .slick-active{
+            background-color: $color-white;
+        }
+    }
+    .slick-dotted.slick-slider{
+        margin-bottom: 0px;
+    }
+}

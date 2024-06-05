@@ -1,0 +1,58 @@
+.banner__wrap {
+    overflow: hidden;
+
+    .banner__img {
+        min-height: 800px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200%;
+        animation: slide 10s linear infinite;
+        @include tablet{
+            min-height: 400px;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.banner__container {
+    position: relative;
+}
+
+.banner__content {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 100%;
+    @include tablet{
+        width: 90%;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: "Neue Haas Grotesk Display Pro";
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 110px;
+        /* 91.667% */
+        letter-spacing: -1.2px;
+        color: $color-white;
+        @include tablet{
+            font-size: 60px;
+            line-height: 70px;
+        }
+    }
+}
+

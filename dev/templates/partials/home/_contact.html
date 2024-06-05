@@ -1,0 +1,97 @@
+<!-- contact -->
+<div class="contact__container" id="contact">
+    <div class="contact__containerwrap">
+        <div class="contact__row d-flex">
+            <div class="contact__title">contact</div>
+            <div class="contact__form">
+                <form action="" class="contact-form" id="contactForm">
+                    <div class="row__cls">
+                        <div class="wd-50 group">
+                            <!-- <input type="text" required="required"/> -->
+                            <input type="text" class=" contactFormName" id="contactFormName" name="contactFormName"
+                                type="text" placeholder="" data-required="Name is required"
+                                data-alphabetsnspace="Please Enter Only Letters"
+                                data-minLength="Your name must consist of at least 2 characters" required="required" />
+                            <span class="highlight"></span><span class="bar"></span>
+                            <label>Full name*</label>
+                        </div>
+
+                        <!-- email  -->
+                        <div class="wd-50 group">
+                            <input type="email" class="email" id="email" name="email" data-required="Email is required"
+                                placeholder="" required="required" />
+                            <span class="highlight"></span><span class="bar"></span>
+                            <label class="form-label">Email*</label>
+                        </div>
+                        <!-- country -->
+                        <div class="wd-50 group">
+                            <input type="text" class="contactFormCountry" id="contactFormCountry"
+                                name="contactFormCountry" type="text" placeholder="" data-required="Country is required"
+                                data-alphabetsnspace="Please Enter Only Letters"
+                                data-minLength="Country must consist of at least 2 characters" required="required">
+                            <span class="highlight"></span><span class="bar"></span>
+                            <label class="form-label">Country*</label>
+                        </div>
+                        <!-- phone  -->
+                        <div class="wd-50 group">
+                            <input type="number" class="contactFormPhone " id="contactFormPhone" value=""
+                                name="contactFormPhone" placeholder="" data-required="Phone is required"
+                                required="required">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="form-label">Phone number*</label>
+                        </div>
+                    </div>
+                    <!-- broker  -->
+                    <div class="wd-100 group">
+                        <select class="contactbroker" id="contactbroker"  name="contactbroker"
+                            data-required="This is required">
+                            <option value="">Are you a Broker*</option>
+                            <option value="1">Yes</option>
+                            <option value="1">No</option>
+                        </select>
+                    </div>
+                    <!-- hear  -->
+                    <div class="wd-100 group">
+                        <select class=" contacthear" id="contacthear" name="contacthear"
+                            data-required="This is required">
+                            <option value="">How did you hear about us?*</option>
+                            <option value="1"> Al Ghurair Site</option>
+                            <option value="1">Broker</option>
+                            <option value="1">Google Search</option>
+                            <option value="1">Online Article</option>
+                            <option value="1">Print Article</option>
+                            <option value="2">Referral</option>
+                            <option value="2">Social Media</option>
+                        </select>
+                    </div>
+                    <!-- interested -->
+                    <div class="wd-100 group">
+                        <select class=" contactinterest" id="contactinterest"
+                            name="contactinterest" data-required="This is required">
+                            <option value="">I am interested in*</option>
+                            <option value="3">2 Bedroom Apartment</option>
+                            <option value="3">3 Bedroom Apartment</option>
+                            <option value="2">Penthouse</option>
+                            <option value="3">Sky Villa</option>
+                        </select>
+                    </div>
+                    <!-- message  -->
+                    <div class="wd-100 msgBox group">
+                        <textarea placeholder="" class="message contactFormMessage "
+                            id="contactFormMessage " name="contactFormMessage"
+                            data-required="Message is required"></textarea>
+                            <span class="highlight"></span><span class="bar"></span>
+                            <label class="form-label">Message*</label>
+                    </div>
+                    <div class="group input__btn">
+                        <input type="submit" class="btn btn-medium btn-transparent text-black  submit__btn"
+                            value="submit">
+                       
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <a href="/" class="backtotop">Back to top </a>
+</div>

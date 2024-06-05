@@ -1,0 +1,52 @@
+.home__designfeatures {
+    background: #2b1a1edb;
+    position: relative;
+    @include tablet{
+        height: 900px;
+    }
+    img{
+        width: 100%;
+        @include tablet{
+            height: 752px;
+            object-fit: cover;
+        }
+    }
+    .home__designcontent {
+        width: 77%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include tablet{
+            width: 100%;
+            margin: 80px 0px;
+            padding: 0 30px;
+            box-sizing: border-box;
+            top: 40%;
+        }
+        p{
+            color: $color-white;
+            &:after{
+                background-color: $color-white;
+            }
+        }
+    }
+    .home__textrow{
+        padding: 50px 0px;
+        @include tablet{
+            padding: 20px 0px;
+        }
+    }
+}
+.home__designtitle {
+    font-family: $neue-font;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 100px; /* 125% */
+    letter-spacing: -0.8px;
+    @include tablet{
+        font-size: 36px;
+        line-height: 52px;
+    }
+}

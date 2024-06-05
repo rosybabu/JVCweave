@@ -1,0 +1,273 @@
+<!-- stacking plan  -->
+<div class="home__stacking-plan">
+    <div class="home__stackingplan-wrap">
+        <img src="images/stacking.png" usemap="#image-map" class="stacking__img">
+
+        <map name="image-map">
+            <div class="area__pool area__content" href="#tab1" >
+                <area target="_blank" alt="pool" data-tooltip="pool" coords="405,321,509,378" shape="rect" href=""
+                    class="plan__pool">
+            </div>
+            <div class="area__meeting area__content" href="#tab2">
+                <area target="_blank" alt="meeting_room" data-tooltip="meeting room"  coords="366,294,429,232" href=""
+                    shape="rect" class="plan__meeting">
+            </div>
+            <div class="area__bar area__content" href="#tab3">
+                <area target="_blank" alt="bar"  data-tooltip="bar" href="" coords="284,243,344,288" shape="rect"
+                    class="plan__bar">
+            </div>
+            <div class="area__sauna area__content" href="#tab4">
+                <area target="_blank" alt="sauna"  data-tooltip="sauna" href="" coords="166,322,198,238" shape="rect"
+                    class="plan__sauna">
+            </div>
+            <div class="area__fitness area__content" href="#tab5">
+                 <area target="_blank" alt="fitness_center"  data-tooltip="fitness center"
+                    href="" coords="53,222,91,307" shape="rect" class="plan__fitness">
+                    
+                </div>
+        </map>
+
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        document.body.appendChild(tooltip);
+    
+        document.querySelectorAll('area[data-tooltip]').forEach(area => {
+            area.addEventListener('mouseover', (event) => {
+                const tooltipText = event.target.getAttribute('data-tooltip');
+                tooltip.textContent = tooltipText;
+                tooltip.style.display = 'block';
+            });
+    
+            area.addEventListener('mousemove', (event) => {
+                tooltip.style.top = `${event.pageY + 10}px`;
+                tooltip.style.left = `${event.pageX + 10}px`;
+            });
+    
+            area.addEventListener('mouseout', () => {
+                tooltip.style.display = 'none';
+            });
+        });
+    });
+    </script>
+    <!-- popup -->
+    <div class="stacking__plan__wrap">
+        <div class="tab-content" id="tab1">
+            <div class="popup__plan" >
+                <div class="popup__plan-wrap">
+                    <div class="popup__img">
+                        <img src="images/pool.png" alt="">
+                    </div>
+                    <div class="popup__content">
+                      <div class="popup__contentwrap">
+                        <h5>Pool</h5>
+                        <p>Lorem ipsum dolor sit amet consetur. Sit integer enim na curs. Sodales tor sit amet bibendum lacus nascetur in non senectus integer enim.</p>
+                     <ul>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                    </ul>
+                    <a href="" class="back_to_plancls">Back to Stacking Plan</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="tab2">
+            <div class="popup__plan" >
+                <div class="popup__plan-wrap">
+                    <div class="popup__img">
+                        <img src="images/sauna.png" alt="">
+                    </div>
+                    <div class="popup__content">
+                      <div class="popup__contentwrap">
+                        <h5>meeting room</h5>
+                        <p>Lorem ipsum dolor sit amet consetur. Sit integer enim na curs. Sodales tor sit amet bibendum lacus nascetur in non senectus integer enim.</p>
+                     <ul>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                    </ul>
+                    <a href="" class="back_to_plancls">Back to Stacking Plan</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="tab3">
+            <div class="popup__plan" >
+                <div class="popup__plan-wrap">
+                    <div class="popup__img">
+                        <img src="images/sauna.png" alt="">
+                    </div>
+                    <div class="popup__content">
+                      <div class="popup__contentwrap">
+                        <h5>bar</h5>
+                        <p>Lorem ipsum dolor sit amet consetur. Sit integer enim na curs. Sodales tor sit amet bibendum lacus nascetur in non senectus integer enim.</p>
+                     <ul>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                    </ul>
+                    <a href="" class="back_to_plancls">Back to Stacking Plan</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="tab4">
+            <div class="popup__plan" >
+                <div class="popup__plan-wrap">
+                    <div class="popup__img">
+                        <img src="images/sauna.png" alt="">
+                    </div>
+                    <div class="popup__content">
+                      <div class="popup__contentwrap">
+                        <h5>Sauna</h5>
+                        <p>Lorem ipsum dolor sit amet consetur. Sit integer enim na curs. Sodales tor sit amet bibendum lacus nascetur in non senectus integer enim.</p>
+                     <ul>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                    </ul>
+                    <a href="" class="back_to_plancls">Back to Stacking Plan</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="tab5">
+            <div class="popup__plan" >
+                <div class="popup__plan-wrap">
+                    <div class="popup__img">
+                        <img src="images/fitness center.png" alt="">
+                    </div>
+                    <div class="popup__content">
+                      <div class="popup__contentwrap">
+                        <h5>fitness center</h5>
+                        <p>Lorem ipsum dolor sit amet consetur. Sit integer enim na curs. Sodales tor sit amet bibendum lacus nascetur in non senectus integer enim.</p>
+                     <ul>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                        <li> Callout features here</li>
+                    </ul>
+                    <a href="" class="back_to_plancls">Back to Stacking Plan</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+<!-- intro residences  -->
+<div class="intro__container" id="residences">
+    <div class="intro__row d-flex flex-reverse">
+        <div class="intro__rowleft">
+            <div class="intro__rowcontents">
+                <div class="intro__rowsubtitle">
+                    <h6>residences</h6>
+                    <img src="images/title.svg" alt="title">
+                </div>
+                <div class="intro__rowtitle">
+                    Where home is a haven.
+And artistry unfolds.
+                </div>
+                <div class="introcont">
+                    <p>Sanctuary of serenity. Center of comfort. Cross the threshold and feel—a sense of arrival, of relief. Let it wash over you as you immerse yourself in artisanal living, delicately crafted for a life of intention. 
+                        In each of our residences, neutral tones and hand-selected finishes round out space for shared moments and memories worth making, while beautiful views of JVC from the balcony envelop and excite.  </p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="intro__rowright">
+            <div class="intro__rowimg">
+                <img src="images/residences.jpg" alt="lifestyle">
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!-- design features  -->
+<div class="home__designfeatures text-white">
+    <div class="home__designfeatureswrap">
+        <img src="images/bg.png" alt="background">
+        <div class="home__designcontent">
+            <div class="home__designtitle">
+                Design Features
+            </div>
+            <div class="home__textrow d-flex">
+                <div class="home__textsingle ">
+                    <h6 class="text__title">Breathable layouts</h6>
+                    <p>Composed for seamless living, each of our 2- and 3-bedroom residences provide ample space to move freely alongside balanced function and form.</p>
+                </div>
+                <div class="home__textsingle">
+                    <h6 class="text__title">Welcoming kitchens</h6>
+                    <p>Fully-fitted kitchens with luxurious stone splash back and countertops welcome mealtime memories.</p>
+                </div>
+                <div class="home__textsingle">
+                    <h6 class="text__title">Calming features</h6>
+                    <p >Elements of bronze and beige tones with hints of rose gold tie back to the landscape and make for a peaceful home.</p>
+                </div>
+                <div class="home__textsingle">
+                    <h6 class="text__title">Intentional curation</h6>
+                    <p>Hand-selected pieces create a sense of harmony, while leaving room for personal curation. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider  -->
+<div class="slider__container">
+    <div class="slider__wrap">
+        <div class="slider__single">
+            <img src="images/Property 1.jpg" alt="Property">
+        </div>
+        <div class="slider__single">
+            <img src="images/Property 2.jpg" alt="Property">
+        </div>
+        <div class="slider__single">
+            <img src="images/Property 3.jpg" alt="Property">
+        </div>
+        <div class="slider__single">
+            <img src="images/Property 4.jpg" alt="Property">
+        </div>
+    </div>
+</div>
+<!-- intro location  -->
+<div class="intro__container">
+    <div class="intro__row d-flex">
+        <div class="intro__rowleft">
+            <div class="intro__rowcontents">
+                <div class="intro__rowsubtitle">
+                    <h6>location</h6>
+                    <img src="images/title.svg" alt="title">
+                </div>
+                <div class="intro__rowtitle">
+                    Piece of community.
+                    Place of calm. 
+                </div>
+                <div class="introcont">
+                    <p>Resting in the tranquil ambiance of the Jumeirah Village Circle, The Weave tucks you into a gated family-friendly neighborhood that remains closely connected to the vibrancy of downtown Dubai and the attractions of the beachfront. 
+                        A short drive to the Dubai Al Maktoum Intl (DWC) Airport and ideal placement near destinations including the Marina, beautiful beaches, golf courses, Miracle Garden and Mall of the Emirates, living here makes going to and from experiences effortless. 
+ </p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="intro__rowright">
+            <div class="intro__rowimg">
+                <img src="images/location.jpg" alt="lifestyle">
+            </div>
+           
+        </div>
+    </div>
+</div>
