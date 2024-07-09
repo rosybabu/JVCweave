@@ -1,7 +1,7 @@
 .contact__container {
     background-color: #EDE9DF;
     @include tablet{
-        padding: 50px 0px 0px 0px;
+        padding: 50px 0px 50px 0px;
     }
 }
 .contact__details {
@@ -32,6 +32,8 @@
         @include tablet{
             width: 100%;
             font-size: 60px;
+            line-height: 70px;
+            padding-bottom: 18px;
         }
     }
 }
@@ -44,6 +46,7 @@
     margin: 0 6px;
     @include tablet{
         width: 100%;
+        margin: 0px !important;
     }
 }
 .wd-50{
@@ -95,7 +98,7 @@ textarea ~ label.error{
 input:focus+.form-label,
 input.has-value+.form-label
  {
-    top: 5px;
+    top: -14px;
     font-size: 14px;
 }
 textarea:focus+.form-label,
@@ -105,17 +108,24 @@ textarea.has-value+.form-label{
 }
 .group{
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    @include tablet{
+        margin-bottom: 20px !important;
+    }
 }
 label.error{
     top: auto !important;
+    position: initial;
 }
 select ~ label{
     position: initial;
 }
 .msgBox textarea:focus~.form-label,
 .msgBox textarea.has-value~.form-label,.msgBox textarea:valid~label {
-    top: -15px;
+    top: -10px;
+}
+.msgBox textarea{
+    height: 72px;
 }
 .msgBox .form-label{
     top: 35px;
@@ -138,10 +148,13 @@ input {
 input:focus {
     outline: none;
 }
-
+.row__cls{
+    display: flex;
+    flex-wrap: wrap;
+}
 input:focus~label,
 input:valid~label{
-    top: -10px;
+    top: -20px;
     font-size: 10px;
     color: #362126;
 }
@@ -149,7 +162,11 @@ input:valid~label{
 // input:focus~.bar:before {
 //     width: 320px;
 // }
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 label {
     color: var(--d-9-d-9-d-9, #362126);
     font-family: $arial-font;
@@ -160,7 +177,7 @@ label {
     position: absolute;
     pointer-events: none;
     left: 0px;
-    top: 10px;
+    top: 0px;
     transition: 300ms ease all;
 }
 
@@ -193,9 +210,33 @@ label {
     flex-wrap: wrap;
 }
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #ede9df inset !important;
+    color: #000 !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    -webkit-text-fill-color: #000 !important;
+}
 .wd-100 {
-    width: 100%;
+    width: 96%;
     clear: both;
+    margin: 0 6px 17px 6px;
+    @include tablet{
+        width: 100%;
+        margin: 0 0 20px 0px;
+    }
 }
 .submit__btn {
     border: 1px solid $color-lightblack;
@@ -213,6 +254,12 @@ text-transform: uppercase;
 padding: 3px 30px !important;
     @include tablet{
         float: none;
+        width: 120px;
+        height: 30px;
+    }
+    &:hover{
+        background-color: #000 !important;
+        color: #fff;
     }
 }
 a.backtotop {
@@ -225,8 +272,31 @@ a.backtotop {
     line-height: 26px; /* 216.667% */
     padding-bottom: 56px;
     display: block;
+    position: relative;
+    &:hover{
+        &::after{
+            content: '';
+    position: absolute;
+    bottom: 50px;
+    width: 300px;
+    height: 1.5px;
+    left: 0px;
+    background-color: #362126;
+    margin-top: 30px;
+    text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
+
+        }
+    }
     @include tablet{
         padding-bottom: 20px;
         padding-top: 20px;
+        display: none;
     }
+}
+.input__btn{
+@include tablet{
+    margin-bottom: 0px !important;
+}
 }

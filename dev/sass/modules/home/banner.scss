@@ -1,8 +1,11 @@
 .banner__wrap {
     overflow: hidden;
-
+height: calc(100vh - 100px);
+@include tablet{
+    height: auto;
+}
     .banner__img {
-        min-height: 800px;
+        min-height: calc(100vh - 100px);
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -27,6 +30,10 @@
 
 .banner__container {
     position: relative;
+    padding-top: 100px;
+    @include tablet{
+        padding-top: 79px;
+    }
 }
 
 .banner__content {

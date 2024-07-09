@@ -6,9 +6,10 @@
     position: fixed;
     width: 100%;
     z-index: 9;
+    height: 100px;
     @include tablet{
         padding: 22px 30px;
-        height: 76px;
+        height: 79px;
     }
     .main__hdr-flex {
         justify-content: space-between;
@@ -32,12 +33,18 @@
     }
 
     .menu__container.header__menu {
-        top: 76px;
+        top: 100px;
+        @include tablet{
+            top: 79px;
+            height: 100vh;
+        }
     }
 
     .hdr__menu {
         padding-bottom: 41px;
-
+@include tablet{
+    padding-bottom: 30px;
+}
         ul {
             li {
 
@@ -46,6 +53,7 @@
                 position: relative;
                 @include tablet{
                     display: block;
+                    padding-bottom: 10px;
                 }
                 
                 a {
@@ -141,6 +149,9 @@
     a{
         position: relative;
         padding-bottom: 10px;
+        font-size: 12px;
+        font-family: $arial-font;
+        line-height: 26px;
         &:hover{
             &:after{
                 content: '';
@@ -214,7 +225,7 @@
 .menu__container{
     .hdr__btn{
         @include tablet{
-            width: 40%;
+            width: 70%;
             margin: 0 auto;
             margin-bottom: 10px !important;
         }

@@ -76,7 +76,7 @@ textarea {
   box-shadow: none;
   outline: none;
   font-size: 14px;
-  height: 48px;
+  height: 26px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -978,11 +978,12 @@ p {
   position: fixed;
   width: 100%;
   z-index: 9;
+  height: 100px;
 }
 @media screen and (max-width: 1024px) {
   .main__hdr {
     padding: 22px 30px;
-    height: 76px;
+    height: 79px;
   }
 }
 .main__hdr .main__hdr-flex {
@@ -1007,10 +1008,21 @@ p {
   }
 }
 .hdr__toggle .menu__container.header__menu {
-  top: 76px;
+  top: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .hdr__toggle .menu__container.header__menu {
+    top: 79px;
+    height: 100vh;
+  }
 }
 .hdr__toggle .hdr__menu {
   padding-bottom: 41px;
+}
+@media screen and (max-width: 1024px) {
+  .hdr__toggle .hdr__menu {
+    padding-bottom: 30px;
+  }
 }
 .hdr__toggle .hdr__menu ul li {
   display: inline-block;
@@ -1020,6 +1032,7 @@ p {
 @media screen and (max-width: 1024px) {
   .hdr__toggle .hdr__menu ul li {
     display: block;
+    padding-bottom: 10px;
   }
 }
 .hdr__toggle .hdr__menu ul li a {
@@ -1103,6 +1116,9 @@ p {
 .hdr__mail a {
   position: relative;
   padding-bottom: 10px;
+  font-size: 12px;
+  font-family: "Arial";
+  line-height: 26px;
 }
 .hdr__mail a:hover:after {
   content: '';
@@ -1170,7 +1186,7 @@ p {
 
 @media screen and (max-width: 1024px) {
   .menu__container .hdr__btn {
-    width: 40%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 10px !important;
   }
@@ -1206,19 +1222,41 @@ p {
   width: 33.33%;
 }
 .footer__container .footer__col .footer__phone {
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  position: relative;
+  transition: .1s ease;
+}
+.footer__container .footer__col .footer__phone:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 150px;
+  height: 1px;
+  background-color: #ffffff;
 }
 .footer__container .footer__col .footer__email {
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
   padding: 12px 0px;
+  position: relative;
+  transition: .1s ease;
+}
+.footer__container .footer__col .footer__email:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 150px;
+  height: 1px;
+  background-color: #ffffff;
 }
 @media screen and (max-width: 1024px) {
   .footer__container .footer__col .footer__email {
@@ -1226,16 +1264,27 @@ p {
   }
 }
 .footer__container .footer__col .footer__address {
+  padding-bottom: 21px;
+  position: relative;
+  transition: .1s ease;
   /* 216.667% */
+}
+.footer__container .footer__col .footer__address:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  width: 150px;
+  height: 1px;
+  background-color: #ffffff;
 }
 .footer__container .footer__col .footer__address p {
   color: #ffffff;
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  padding-bottom: 21px;
 }
 @media screen and (max-width: 1024px) {
   .footer__container .footer__col .footer__address p {
@@ -1243,7 +1292,7 @@ p {
   }
 }
 .footer__container .footer__policy {
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 10px;
   font-style: normal;
   font-weight: 600;
@@ -1281,10 +1330,18 @@ p {
   height: 36px;
   display: block;
 }
+.footer__container .footer__social svg:hover path {
+  fill: #362126;
+}
+.footer__container .footer__social svg:hover {
+  background: white;
+  border-radius: 50%;
+  border: none;
+}
 
 .footer__copyright {
   text-align: center;
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 10px;
   font-style: normal;
   font-weight: 600;
@@ -1306,12 +1363,25 @@ p {
   padding-bottom: 21px;
 }
 .footer__menu ul li a {
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
   text-transform: capitalize;
+  margin-bottom: 6px;
+  display: block;
+  position: relative;
+  transition: .1s ease;
+}
+.footer__menu ul li a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 150px;
+  height: 1px;
+  background-color: #ffffff;
 }
 .footer__menu p {
   text-align: right;
@@ -1336,8 +1406,9 @@ p {
   }
 }
 .btm__ftr p {
-  text-align: center;
-  font-family: "Area";
+  width: 33.33%;
+  text-align: right;
+  font-family: "Arial";
   font-size: 10px;
   font-style: normal;
   font-weight: 600;
@@ -1354,6 +1425,9 @@ p {
 .btm__ftr p a {
   text-decoration-line: underline;
 }
+.btm__ftr div {
+  width: 33.33%;
+}
 @media screen and (max-width: 1024px) {
   .btm__ftr div {
     width: 100%;
@@ -1362,14 +1436,24 @@ p {
 }
 
 .footer__moblogo {
-  padding-bottom: 38px;
+  padding-bottom: 30px;
+}
+
+.footer__flex {
+  align-items: flex-start;
 }
 
 .banner__wrap {
   overflow: hidden;
+  height: calc(100vh - 100px);
+}
+@media screen and (max-width: 1024px) {
+  .banner__wrap {
+    height: auto;
+  }
 }
 .banner__wrap .banner__img {
-  min-height: 800px;
+  min-height: calc(100vh - 100px);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1393,6 +1477,12 @@ p {
 }
 .banner__container {
   position: relative;
+  padding-top: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .banner__container {
+    padding-top: 79px;
+  }
 }
 
 .banner__content {
@@ -1431,7 +1521,7 @@ p {
 }
 @media screen and (max-width: 1024px) {
   .home__textcontent {
-    padding: 80px 0px 0px 0px;
+    padding: 50px 0px 0px 0px;
   }
 }
 
@@ -1474,6 +1564,7 @@ p {
   font-weight: 300;
   line-height: 52px;
   padding-bottom: 30px;
+  min-width: 650px;
 }
 @media screen and (max-width: 1024px) {
   .home__textcontentleft h2 {
@@ -1481,11 +1572,12 @@ p {
     font-style: normal;
     font-weight: 300;
     line-height: 40px;
+    min-width: auto;
   }
 }
 .home__textcontentleft p {
   color: #362126;
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1512,6 +1604,7 @@ p {
 @media screen and (max-width: 1024px) {
   .home__textcontentright {
     width: 100%;
+    padding-top: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1540,12 +1633,12 @@ p {
 }
 @media screen and (max-width: 1024px) {
   .home__textrow h6 {
-    padding-top: 10px;
+    padding-top: 30px;
   }
 }
 .home__textrow p {
   color: #362126;
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1554,16 +1647,19 @@ p {
 
 .home__textsingle {
   padding-right: 30px;
+  width: calc(100%/4);
 }
 @media screen and (max-width: 1024px) {
   .home__textsingle {
     padding-right: 0px;
+    width: 100%;
   }
 }
 .home__textsingle p {
   position: relative;
   padding-bottom: 15px;
   min-height: 135px;
+  max-height: 135px;
 }
 @media screen and (max-width: 1024px) {
   .home__textsingle p {
@@ -1636,7 +1732,7 @@ p {
   }
 }
 .home__bg-textcontent .home__bg-right p {
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
@@ -1648,14 +1744,25 @@ p {
   border: 1px solid #ffffff;
   border-radius: 30px;
   font-family: "Area";
-  font-weight: 300;
+  font-weight: bold;
   font-size: 12px;
   padding: 7px 30px;
+}
+.home__bg-textcontent .home__bg-right .btn-content:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .home__bg-textcontent .home__bg-right .btn-content {
+    width: 200px;
+    height: 30px;
+  }
 }
 
 .intro__container {
   background-color: #EDE9DF;
-  padding: 250px 0px;
+  padding: 210px 0px;
 }
 @media screen and (max-width: 1024px) {
   .intro__container {
@@ -1693,7 +1800,7 @@ p {
 }
 
 .intro__rowleft {
-  width: 70%;
+  width: 60%;
 }
 @media screen and (max-width: 1024px) {
   .intro__rowleft {
@@ -1702,7 +1809,7 @@ p {
 }
 
 .intro__rowright {
-  width: 30%;
+  width: 40%;
 }
 @media screen and (max-width: 1024px) {
   .intro__rowright {
@@ -1779,7 +1886,7 @@ p {
 
 .introcont p {
   color: #362126;
-  font-family: "Area";
+  font-family: "Arial";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1805,7 +1912,7 @@ p {
 }
 @media screen and (max-width: 1024px) {
   .contact__container {
-    padding: 50px 0px 0px 0px;
+    padding: 50px 0px 50px 0px;
   }
 }
 
@@ -1846,6 +1953,8 @@ p {
   .contact__containerwrap .contact__title {
     width: 100%;
     font-size: 60px;
+    line-height: 70px;
+    padding-bottom: 18px;
   }
 }
 
@@ -1864,6 +1973,7 @@ p {
 @media screen and (max-width: 1024px) {
   .wd-50 {
     width: 100%;
+    margin: 0px !important;
   }
 }
 
@@ -1918,7 +2028,7 @@ textarea ~ label.error {
 
 input:focus + .form-label,
 input.has-value + .form-label {
-  top: 5px;
+  top: -14px;
   font-size: 14px;
 }
 
@@ -1930,11 +2040,17 @@ textarea.has-value + .form-label {
 
 .group {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 1024px) {
+  .group {
+    margin-bottom: 20px !important;
+  }
 }
 
 label.error {
   top: auto !important;
+  position: initial;
 }
 
 select ~ label {
@@ -1943,7 +2059,11 @@ select ~ label {
 
 .msgBox textarea:focus ~ .form-label,
 .msgBox textarea.has-value ~ .form-label, .msgBox textarea:valid ~ label {
-  top: -15px;
+  top: -10px;
+}
+
+.msgBox textarea {
+  height: 72px;
 }
 
 .msgBox .form-label {
@@ -1969,11 +2089,22 @@ input:focus {
   outline: none;
 }
 
+.row__cls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 input:focus ~ label,
 input:valid ~ label {
-  top: -10px;
+  top: -20px;
   font-size: 10px;
   color: #362126;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 label {
@@ -1987,7 +2118,7 @@ label {
   position: absolute;
   pointer-events: none;
   left: 0px;
-  top: 10px;
+  top: 0px;
   transition: 300ms ease all;
 }
 
@@ -2024,9 +2155,38 @@ label {
   }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #ede9df inset !important;
+  color: #000 !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: #000 !important;
+}
+
 .wd-100 {
-  width: 100%;
+  width: 96%;
   clear: both;
+  margin: 0 6px 17px 6px;
+}
+@media screen and (max-width: 1024px) {
+  .wd-100 {
+    width: 100%;
+    margin: 0 0 20px 0px;
+  }
 }
 
 .submit__btn {
@@ -2048,7 +2208,13 @@ label {
 @media screen and (max-width: 1024px) {
   .submit__btn {
     float: none;
+    width: 120px;
+    height: 30px;
   }
+}
+.submit__btn:hover {
+  background-color: #000 !important;
+  color: #fff;
 }
 
 a.backtotop {
@@ -2062,11 +2228,32 @@ a.backtotop {
   /* 216.667% */
   padding-bottom: 56px;
   display: block;
+  position: relative;
+}
+a.backtotop:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 50px;
+  width: 300px;
+  height: 1.5px;
+  left: 0px;
+  background-color: #362126;
+  margin-top: 30px;
+  text-align: center;
+  transform: translateX(-50%);
+  left: 50%;
 }
 @media screen and (max-width: 1024px) {
   a.backtotop {
     padding-bottom: 20px;
     padding-top: 20px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .input__btn {
+    margin-bottom: 0px !important;
   }
 }
 
@@ -2075,11 +2262,20 @@ a.backtotop {
   border-radius: 30px;
   font-family: "Area";
   font-weight: bold;
+  font-size: 12px;
+  min-width: 160px;
+  height: 30px;
+  line-height: 22px;
 }
 @media screen and (max-width: 1024px) {
   .btn__watchvideo {
     font-size: 12px;
   }
+}
+.btn__watchvideo:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
 }
 
 .video__btn {
@@ -2108,7 +2304,6 @@ a.backtotop {
 @media screen and (max-width: 1024px) {
   .home__videocontainer {
     width: 100%;
-    padding: 30px;
     box-sizing: border-box;
   }
 }
@@ -2269,7 +2464,7 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 @media screen and (max-width: 1024px) {
   .home__designfeatures {
-    height: 900px;
+    height: 853px;
   }
 }
 .home__designfeatures img {
@@ -2504,7 +2699,7 @@ circle {
 }
 @media only screen and (min-width: 275px) and (max-width: 767px) {
   .home__video {
-    padding: 30px 0px;
+    padding: 30px 30px;
   }
 }
 

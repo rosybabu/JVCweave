@@ -3,8 +3,17 @@
     border-radius: 30px;
     font-family: $area-font;
     font-weight: bold;
+    font-size: 12px;
+    min-width: 160px;
+    height: 30px;
+    line-height: 22px;
     @include tablet{
       font-size: 12px;
+    }
+    &:hover{
+      background-color: $color-white;
+      color: $color-black;
+      border: 1px solid $color-white;
     }
 }
 .video__btn {
@@ -29,7 +38,7 @@
     margin: 0 auto;
     @include tablet{
       width: 100%;
-      padding: 30px;
+      // padding: 30px;
       box-sizing: border-box;
     }
 }

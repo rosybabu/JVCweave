@@ -1,62 +1,108 @@
 .footer__container {
     background-color: $color-ftr;
     padding: 72px 0px;
-@include tablet{
-    padding: 65px 0px;
-}
+
+    @include tablet {
+        padding: 65px 0px;
+    }
+
     .footer__wrapper {
         width: 91%;
         margin: 0 auto;
     }
-.footer__flex{
-    @include tablet{
-        justify-content: space-between;
+
+    .footer__flex {
+        @include tablet {
+            justify-content: space-between;
+        }
     }
-}
+
     .footer__col {
         width: 33.33%;
 
         .footer__phone {
-            font-family: $area-font;
+            font-family: $arial-font;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 26px;
+            position: relative;
+            transition: .1s ease;
+            &:hover{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    width: 150px;
+                    height: 1px;
+                    background-color: $color-white;
+                }
+            }
         }
 
         .footer__email {
-            font-family: $area-font;
+            font-family: $arial-font;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 26px;
             padding: 12px 0px;
-            @include tablet{
+            position: relative;
+            transition: .1s ease;
+            &:hover{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0px;
+                    width: 150px;
+                    height: 1px;
+                    background-color: $color-white;
+                }
+            }
+            @include tablet {
                 padding: 0px;
             }
         }
 
         .footer__address {
-            p{
+            padding-bottom: 21px;
+            position: relative;
+            transition: .1s ease;
+            &:hover{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 15px;
+                    left: 0px;
+                    width: 150px;
+                    height: 1px;
+                    background-color: $color-white;
+                }
+            }
+            p {
                 color: $color-white;
-                font-family: $area-font;
+                font-family: $arial-font;
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 26px;
-                padding-bottom: 21px;
-                @include tablet{
+
+                // padding-bottom: 21px;
+                @include tablet {
                     padding-bottom: 0px;
                 }
             }
-          
+
             /* 216.667% */
         }
 
-       
+
     }
+
     .footer__policy {
-        font-family: $area-font;
+        font-family: $arial-font;
         font-size: 10px;
         font-style: normal;
         font-weight: 600;
@@ -66,6 +112,7 @@
         font-style: italic;
         color: $color-white;
     }
+
     .footer__logo {
         text-align: center;
     }
@@ -73,16 +120,19 @@
     .footer__social {
         padding: 59px 0px 29.5px 0px;
 
-@include tablet{
-    padding: 20px 0px;
-}
+        @include tablet {
+            padding: 20px 0px;
+        }
+
         li {
             display: inline-block;
             padding: 0 7px;
-@include tablet{
-    padding: 0px;
-    padding-right: 7px !important;
-}
+
+            @include tablet {
+                padding: 0px;
+                padding-right: 7px !important;
+            }
+
             a {
                 border: 1px solid $color-white;
                 border-radius: 50%;
@@ -92,37 +142,67 @@
             }
         }
 
+        svg:hover path {
+            fill: #362126;
+        }
+
+        svg:hover {
+            background: white;
+            border-radius: 50%;
+            border: none;
+        }
+
     }
 
-    
+
 }
+
 .footer__copyright {
     text-align: center;
-    font-family: $area-font;
+    font-family: $arial-font;
     font-size: 10px;
     font-style: normal;
     font-weight: 600;
     line-height: 26px;
     font-style: italic;
-        color: $color-white;
+    color: $color-white;
     text-decoration-line: underline;
 }
+
 .footer__menu {
     text-align: right;
-@include tablet{
-    text-align: left;
-}
+
+    @include tablet {
+        text-align: left;
+    }
+
     ul {
         padding-bottom: 21px;
 
         li {
             a {
-                font-family: $area-font;
+                font-family: $arial-font;
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 26px;
                 text-transform: capitalize;
+                margin-bottom: 6px;
+                display: block;
+                position: relative;
+                transition: .1s ease;
+                &:hover{
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        width: 150px;
+                        height: 1px;
+                        background-color: $color-white;
+                    }
+                }
+               
             }
         }
     }
@@ -142,36 +222,50 @@
         }
     }
 }
-.btm__ftr{
+
+.btm__ftr {
     justify-content: space-between;
-    @include tablet{
+
+    @include tablet {
         flex-wrap: wrap;
     }
-    p{
-        text-align: center;
-    font-family: $area-font;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px;
-    font-style: italic;
+
+    p {
+        width: 33.33%;
+        text-align: right;
+        font-family: $arial-font;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+        font-style: italic;
         color: $color-white;
-        @include tablet{
+
+        @include tablet {
             width: 100%;
             text-align: left;
         }
-        a{
+
+        a {
             text-decoration-line: underline;
         }
-    
+
     }
-    div{
-        @include tablet{
+
+    div {
+        width: 33.33%;
+
+        @include tablet {
             width: 100%;
             text-align: left;
         }
     }
 }
+
 .footer__moblogo {
-    padding-bottom: 38px;
+    padding-bottom: 30px;
+}
+
+.footer__flex {
+    align-items: flex-start;
 }

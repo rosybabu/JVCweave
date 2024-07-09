@@ -767,34 +767,38 @@ And artistry unfolds.
 <script>
       function initMap() {
     var location = { lat: 25.1870175, lng: 55.2602345 }; // San Francisco, CA, USA
-    var mapOptions = {
-        center: location,
-        zoom: 15,
-        styles: [
-            {
-                "featureType": "road",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "color": "#212121"
-                }
-              ]
-            },
-        ]
-  
+   // Starting map options
+   var mapOptions = {
+          center: location,
+          zoom: 12
     };
-
-    // Create a map instance
-    var map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
-
-    // Add markers to the maps
-    var marker1 = new google.maps.Marker({
-        position: location,
-        map: map1,
-        title: 'Marker 1'
-    });
-
-   
+    
+    // Create a new Google Maps Object passing in the element and custom options
+    var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
+    
+    
+    // State custom styles
+    var styles = [
+      {
+        "featureType": "landscape",
+        "stylers": [
+          { "color": "#D8E146" }
+        ]
+      },{
+        "featureType": "water",
+        "stylers": [
+          { "color": "red" }
+        ]
+      },{
+        "featureType": "poi.business",
+        "stylers": [
+          { "color": "#abdc89" }
+        ]
+      }
+    ]
+    
+    // Set custom styles on map
+    map.setOptions({styles: styles});
 }
 </script>
 <script src="js/temp/bundle.js"></script>
