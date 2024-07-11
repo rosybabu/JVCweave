@@ -5,24 +5,24 @@
                 <div class="footer__moblogo">
                     <a href=""><img src="images/footer_logo.png" alt="footer logo"></a>
                 </div>
-                                </div>
+            </div>
             <div class="footer__flex d-flex align-center text-white">
-                
+
                 <div class="footer__col footer__contact">
                     <div class="footer__phone">
                         + xxx xxx xxx
                     </div>
                     <div class="footer__email">
-                       <a href="mailto: info@theweave.com"> info@theweave.com</a>
+                        <a href="mailto: info@theweave.com"> info@theweave.com</a>
                     </div>
                     <div class="footer__address">
                         <a href="">
-                        <p>The Weave, </p>
-                        <p> Jumeirah Village Circle, </p>
-                        <p>Dubai, 10011</p>
+                            <p>The Weave, </p>
+                            <p> Jumeirah Village Circle, </p>
+                            <p>Dubai, 10011</p>
                         </a>
                     </div>
-                   
+
                 </div>
                 <div class="footer__col dis__desktop ">
                     <div class="footer__logo">
@@ -62,9 +62,9 @@
                                     </svg></a></li>
                         </ul>
                     </div>
-                   
+
                 </div>
-           
+
                 <div class="footer__col">
                     <div class="footer__menu">
                         <ul>
@@ -76,11 +76,11 @@
                             <li><a href="">location</a></li>
                             <li><a href="">contact</a></li>
                         </ul>
-                     
+
                     </div>
 
                 </div>
-                
+
             </div>
             <div class="dis__tablet ">
                 <div class="footer__social ">
@@ -117,7 +117,7 @@
                                 </svg></a></li>
                     </ul>
                 </div>
-               
+
             </div>
             <div class="footer__flex d-flex btm__ftr">
                 <div class="footer__policy">
@@ -132,47 +132,132 @@
     </div>
 </footer>
 <script>
-      function initMap() {
-    var location = { lat: 25.1870175, lng: 55.2602345 }; // San Francisco, CA, USA
-   // Starting map options
-   var mapOptions = {
-          center: location,
-          zoom: 12
-    };
-    
-    // Create a new Google Maps Object passing in the element and custom options
-    var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
-    
-    
-    // State custom styles
-    var styles = [
-      {
-        "featureType": "landscape",
-        "stylers": [
-          { "color": "#D8E146" }
-        ]
-      },{
-        "featureType": "water",
-        "stylers": [
-          { "color": "red" }
-        ]
-      },{
-        "featureType": "poi.business",
-        "stylers": [
-          { "color": "#abdc89" }
-        ]
-      }
-    ]
-    
-    // Set custom styles on map
-    map.setOptions({styles: styles});
-}
+    function initMap() {
+       
+        // var location = { lat: 25.1870175, lng: 55.2602345 }; // San Francisco, CA, USA
+        // Styles a map in night mode.
+        const map = new google.maps.Map(document.getElementById("map1"), {
+            center: { lat: 25.0605921, lng: 55.1879935 },
+            zoom: 14,
+            styles: [
+                { elementType: "geometry", stylers: [{ color: "#44242c" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e",   visibility: "off"  }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#746855," }] },
+                {
+                    featureType: "administrative.locality",
+                    elementType: "labels.text.fill",
+                    stylers: [{
+                        color: "#9d7049",
+                        "visibility": "off"
+                    }],
+                },
+                {
+                    featureType: "poi",
+                    elementType: "labels.text.fill",
+                    stylers: [{
+                        color: "#9d7049",
+                        "visibility": "off"
+                    }],
+                },
+                {
+                    featureType: "poi.park",
+                    elementType: "geometry",
+                    stylers: [{
+                        color: "#44242c",
+                        "visibility": "off"
+                    }],
+                },
+                {
+                    featureType: "poi.park",
+                    elementType: "labels.text.fill",
+                    stylers: [{
+                        color: "#9d7049",
+                        "visibility": "off"
+                    }],
+                },
+                {
+                    featureType: "road",
+                    elementType: "geometry",
+                    stylers: [{
+                        color: "#553940",
+
+                    }],
+                },
+                {
+                    featureType: "road",
+                    elementType: "geometry.stroke",
+                    stylers: [{ color: "#553940" }],
+                },
+                {
+                    featureType: "road",
+                    elementType: "labels.text.fill",
+                    stylers: [{ color: "#9d7049" }],
+                },
+                {
+                    featureType: "road.highway",
+                    elementType: "geometry",
+                    stylers: [{ color: "#553940" }],
+                },
+                {
+                    featureType: "road.highway",
+                    elementType: "geometry.stroke",
+                    stylers: [{ color: "#553940" }],
+                },
+                {
+                    featureType: "road.highway",
+                    elementType: "labels.text.fill",
+                    stylers: [{ color: "#9d7049" }],
+                },
+                {
+                    featureType: "transit",
+                    elementType: "geometry",
+                    stylers: [{ color: "#2f3948" }],
+                },
+                {
+                    featureType: "transit.station",
+                    elementType: "labels.text.fill",
+                    stylers: [{
+                        color: "#9d7049",
+                        "visibility": "off"
+                    }],
+                },
+                {
+                    featureType: "water",
+                    elementType: "geometry",
+                    stylers: [{ color: "#44242c" }],
+                },
+                {
+                    featureType: "water",
+                    elementType: "labels.text.fill",
+                    stylers: [{ color: "#9d7049" }],
+                },
+                {
+                    featureType: "water",
+                    elementType: "labels.text.stroke",
+                    stylers: [{ color: "#9d7049" }],
+                },
+                {
+                    featureType: 'poi.business',
+                    stylers: [{ visibility: 'off' }]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'labels.icon',
+                    stylers: [{ visibility: 'off' }]
+                }
+            ],
+
+        });
+
+        // Set custom styles on map
+        //  map.setOptions({styles: styles});
+    }
 </script>
 <script src="js/temp/bundle.js"></script>
 <script src="js/lib/imageresizer.js"></script>
 <script src="js/main.js"></script>
 <script
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKjk8ehdWBT7IJqINB9NY24-vjmQ79uIo&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQigAjV6uxEHm4m4sYjHEJDeBIEOhMIfs&callback=initMap"></script>
 </body>
 
 </html>

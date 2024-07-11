@@ -334,6 +334,17 @@ display: inline-block;
         font-size: 28px;
         line-height: 40px;
     }
+    p{
+        font-family: $neue-font;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 52px;
+    @include tablet{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    }
 }
 
 .introcont {

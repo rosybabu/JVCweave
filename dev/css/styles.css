@@ -1361,6 +1361,7 @@ p {
 }
 .footer__menu ul {
   padding-bottom: 21px;
+  text-align: right;
 }
 .footer__menu ul li a {
   font-family: "Arial";
@@ -1883,6 +1884,19 @@ p {
     line-height: 40px;
   }
 }
+.intro__rowtitle p {
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 52px;
+}
+@media screen and (max-width: 1024px) {
+  .intro__rowtitle p {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
 
 .introcont p {
   color: #362126;
@@ -1991,7 +2005,7 @@ select, select.error {
   line-height: 30px;
   color: #362126;
   padding: 0px;
-  font-family: "Arial";
+  font-family: "Area";
 }
 
 option {
@@ -2015,7 +2029,7 @@ textarea {
   box-shadow: none !important;
   text-transform: capitalize;
   color: var(--d-9-d-9-d-9, #362126);
-  font-family: "Arial";
+  font-family: "Area";
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
@@ -2109,7 +2123,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 label {
   color: var(--d-9-d-9-d-9, #362126);
-  font-family: "Arial";
+  font-family: "Area";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -2255,6 +2269,100 @@ a.backtotop:hover::after {
   .input__btn {
     margin-bottom: 0px !important;
   }
+}
+
+#contact-sucessmessage {
+  color: white;
+}
+
+.contact_formsubs label {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 380;
+  line-height: 19px;
+  /* 158.333% */
+}
+
+.contact_formsubs {
+  position: relative;
+  display: flex;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.contact_formsubs label {
+  position: relative;
+  cursor: pointer;
+  pointer-events: all;
+  top: 0;
+  left: 9px;
+  width: 100%;
+  color: var(--d-9-d-9-d-9, #362126);
+  font-family: "Area";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.contact_formsubs label a {
+  text-decoration: underline;
+}
+
+.contact_formsubs input {
+  width: 14px;
+  height: 14px;
+  accent-color: #fff;
+  background: #fff;
+  border: 3px solid #fff !important;
+  border-radius: 4px;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.contact_formsubs input:focus {
+  outline: #fff;
+}
+
+.contact_formsubs input:focus ~ label, .contact_formsubs input:valid ~ label {
+  top: 0;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact_formsubs label {
+    font-size: 11px;
+  }
+
+  .contact_formsubs {
+    margin-bottom: 24px;
+  }
+
+  .contact_formsubs input:focus ~ label, .contact_formsubs input:valid ~ label {
+    top: 0 !important;
+    font-size: 11px !important;
+  }
+}
+.contact_formsubs + .error {
+  margin-top: -18px;
+  padding-left: 32px;
+  margin-bottom: 18px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.selectcls {
+  position: relative;
+}
+
+.selectcls svg {
+  position: absolute;
+  top: 50%;
+  right: 0px;
 }
 
 .btn__watchvideo {
