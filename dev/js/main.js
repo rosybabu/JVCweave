@@ -37,6 +37,17 @@ var main = {
   },
   //4.Function to implement contactform validation
   contactValidn: function () {
+  
+  $('.contactFormPhone').blur(function()
+{
+    if( !$(this).val() ) {
+      $('.flag-icon').hide(); 
+    }
+}); 
+  $('.contactFormPhone').focusin(  
+    function(){  
+      $('.flag-icon').show(); 
+    })
     $("#contactForm").validate({
       rules: {
         contactFormName: {

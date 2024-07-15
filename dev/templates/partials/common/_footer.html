@@ -133,124 +133,179 @@
 </footer>
 <script>
     function initMap() {
-       
-        // var location = { lat: 25.1870175, lng: 55.2602345 }; // San Francisco, CA, USA
-        // Styles a map in night mode.
-        const map = new google.maps.Map(document.getElementById("map1"), {
-            center: { lat: 25.0605921, lng: 55.1879935 },
-            zoom: 14,
-            styles: [
-                { elementType: "geometry", stylers: [{ color: "#44242c" }] },
-                { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e",   visibility: "off"  }] },
-                { elementType: "labels.text.fill", stylers: [{ color: "#746855," }] },
-                {
-                    featureType: "administrative.locality",
-                    elementType: "labels.text.fill",
-                    stylers: [{
-                        color: "#9d7049",
-                        "visibility": "off"
-                    }],
-                },
-                {
-                    featureType: "poi",
-                    elementType: "labels.text.fill",
-                    stylers: [{
-                        color: "#9d7049",
-                        "visibility": "off"
-                    }],
-                },
-                {
-                    featureType: "poi.park",
-                    elementType: "geometry",
-                    stylers: [{
-                        color: "#44242c",
-                        "visibility": "off"
-                    }],
-                },
-                {
-                    featureType: "poi.park",
-                    elementType: "labels.text.fill",
-                    stylers: [{
-                        color: "#9d7049",
-                        "visibility": "off"
-                    }],
-                },
-                {
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [{
-                        color: "#553940",
 
-                    }],
-                },
-                {
-                    featureType: "road",
-                    elementType: "geometry.stroke",
-                    stylers: [{ color: "#553940" }],
-                },
-                {
-                    featureType: "road",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#9d7049" }],
-                },
-                {
-                    featureType: "road.highway",
-                    elementType: "geometry",
-                    stylers: [{ color: "#553940" }],
-                },
-                {
-                    featureType: "road.highway",
-                    elementType: "geometry.stroke",
-                    stylers: [{ color: "#553940" }],
-                },
-                {
-                    featureType: "road.highway",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#9d7049" }],
-                },
-                {
-                    featureType: "transit",
-                    elementType: "geometry",
-                    stylers: [{ color: "#2f3948" }],
-                },
-                {
-                    featureType: "transit.station",
-                    elementType: "labels.text.fill",
-                    stylers: [{
-                        color: "#9d7049",
-                        "visibility": "off"
-                    }],
-                },
-                {
-                    featureType: "water",
-                    elementType: "geometry",
-                    stylers: [{ color: "#44242c" }],
-                },
-                {
-                    featureType: "water",
-                    elementType: "labels.text.fill",
-                    stylers: [{ color: "#9d7049" }],
-                },
-                {
-                    featureType: "water",
-                    elementType: "labels.text.stroke",
-                    stylers: [{ color: "#9d7049" }],
-                },
-                {
-                    featureType: 'poi.business',
-                    stylers: [{ visibility: 'off' }]
-                },
-                {
-                    featureType: 'transit',
-                    elementType: 'labels.icon',
-                    stylers: [{ visibility: 'off' }]
-                }
-            ],
+        var locations = [
+            ['dubai hills mall', 25.100313522798874, 55.238639094840906, 1, "./images/maps/cart.svg"],
+            ['Milano By Giovanni Boutique Suites', 25.06112454086944, 55.217419610728925, 2, "./images/maps/springs.svg"],
+            ['the springs souk', 25.065674740034503, 55.193076970249754, 3, "./images/maps/springs.svg"],
+            ['weave', 25.065723138719054, 55.20326557491373, 4, "./images/maps/logo.svg"],
+            ['The Els Club At Dubai Sport City', 25.0403710484865, 55.2191732079566, 5, "./images/maps/flag.svg"],
+            ['dubai hills golf  club', 25.02094819538456, 55.19982242607015, 6, "./images/maps/flag.svg"],
+            // ['dubai hills mall,', 25.121636071512068, 55.26446351627922, 7, "./images/maps/flag.svg"],
+            ['FIVE Jumeirah Village Hotel', 25.054750744713747, 55.209556461791074, 8, "./images/maps/building.svg"],
+            ['circle mall', 25.06625322507372, 55.21656899250157, 9, "./images/maps/cart.svg"],
+            ['Dubai Autodrome', 25.04829465328908, 55.238015083195506, 10, "./images/maps/motor.svg"],
+            ['viva supermarket', 25.0639365563177, 55.2031344697029, 11, "./images/maps/cart.svg"]
+
+        ];
+        // Define the custom styles
+        const customStyle = [
+            // styles: [
+            { elementType: "geometry", stylers: [{ color: "#44242c", visibility: "off" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e", visibility: "off" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#746855", visibility: "off" }] },
+            {
+                featureType: "poi",
+                elementType: "labels",
+                stylers: [{ visibility: "off" }]
+            },
+            {
+                featureType: "administrative.locality",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#9d7049",
+                    "visibility": "off"
+                }],
+            },
+            {
+                featureType: "poi",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#9d7049",
+                    "visibility": "off"
+                }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#44242c",
+                    "visibility": "off"
+                }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#9d7049",
+                    "visibility": "off"
+                }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [{
+                    color: "#553940",
+                    "visibility": "off"
+                }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#553940", "visibility": "off" }],
+            },
+            {
+                featureType: "road",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#9d7049", "visibility": "off" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry",
+                stylers: [{ color: "#553940", "visibility": "off" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#553940", "visibility": "off" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#9d7049", "visibility": "off" }],
+            },
+            {
+                featureType: "transit",
+                elementType: "geometry",
+                stylers: [{ color: "#2f3948" }],
+            },
+            {
+                featureType: "transit.station",
+                elementType: "labels.text.fill",
+                stylers: [{
+                    color: "#9d7049",
+                    "visibility": "off"
+                }],
+            },
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [{ color: "#44242c" }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#9d7049", "visibility": "off" }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.stroke",
+                stylers: [{ color: "#9d7049" }],
+            },
+            {
+                featureType: 'poi.business',
+                stylers: [{ visibility: 'off' }]
+            },
+            {
+                featureType: 'transit',
+                elementType: 'labels.icon',
+                stylers: [{ visibility: 'off' }]
+            }
+
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map1'), {
+            zoom: 14,
+            center: new google.maps.LatLng(25.0605921, 55.1879935),
+            styles: customStyle
+
 
         });
 
-        // Set custom styles on map
-        //  map.setOptions({styles: styles});
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                icon: {
+                    url: locations[i][4],
+                    scaledSize: new google.maps.Size(20, 34),
+                },
+                largeicon: {
+                    url: locations[i][4],
+                    scaledSize: new google.maps.Size(30, 44),
+                }
+            });
+            google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+                return function () {
+                    marker.setIcon(marker.largeicon);
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+
+            })(marker, i));
+            google.maps.event.addListener(marker, 'mouseout', (function (marker, i) {
+                return function () {
+                    marker.setIcon(marker.icon);
+                    infowindow.close();
+                }
+
+            })(marker, i));
+        }
+
     }
 </script>
 <script src="js/temp/bundle.js"></script>

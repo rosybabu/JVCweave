@@ -1330,6 +1330,10 @@ p {
   height: 36px;
   display: block;
 }
+.footer__container .footer__social svg {
+  width: 36px;
+  height: 36px;
+}
 .footer__container .footer__social svg:hover path {
   fill: #362126;
 }
@@ -2363,6 +2367,92 @@ select {
   position: absolute;
   top: 50%;
   right: 0px;
+}
+
+.flag-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 35px;
+  display: none;
+}
+.flag-icon img {
+  width: 28px;
+  height: 16px;
+  display: inline-block;
+}
+.flag-icon span {
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Area";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.contactFormPhone {
+  padding-left: 70px !important;
+}
+
+.error + .flag-icon {
+  top: 22%;
+}
+
+input.has-value + .flag-icon {
+  top: 47%;
+}
+
+:valid ~ label + .flag-icon {
+  top: 22%;
+}
+
+select {
+  background: transparent;
+}
+
+select option:hover {
+  box-shadow: 0 0 10px 100px #fff inset !important;
+  color: white;
+}
+
+select option:checked {
+  box-shadow: 0 0 10px 100px #fff inset !important;
+}
+
+option {
+  background-color: #ede9df;
+  color: #000 !important;
+}
+
+.slick-dots li button:before {
+  opacity: 0 !important;
+}
+
+.gm-style .gm-style-iw-c {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+.gm-style-iw-d div {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.gm-style .gm-style-iw-tc {
+  display: none;
+}
+
+.gm-style-iw-d {
+  overflow: auto !important;
+  padding: 0px;
 }
 
 .btn__watchvideo {

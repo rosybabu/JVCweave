@@ -141,7 +141,10 @@
                 display: block;
             }
         }
-
+svg{
+    width: 36px;
+    height: 36px;
+}
         svg:hover path {
             fill: #362126;
         }
