@@ -177,7 +177,7 @@ $(document).ready(function () {
   main.stickyHeader();
   main.humburger();
   // main.bannerSlider();
-  main.contactValidn();
+  // main.contactValidn();
   main.slider();
   main.video();
   main.scrollTop();
