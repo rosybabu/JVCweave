@@ -1308,6 +1308,10 @@ p {
 .footer__container .footer__logo {
   text-align: center;
 }
+.footer__container .footer__logo img {
+  width: 194px;
+  height: 45px;
+}
 .footer__container .footer__social {
   padding: 59px 0px 29.5px 0px;
 }
@@ -1374,13 +1378,14 @@ p {
   font-family: "Arial";
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 26px;
   text-transform: capitalize;
   margin-bottom: 6px;
   display: block;
   position: relative;
-  transition: .1s ease;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
 }
 .footer__menu ul li a:hover::after {
   content: '';
@@ -1639,6 +1644,7 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 40px;
+  padding-bottom: 10px;
 }
 @media screen and (max-width: 1024px) {
   .home__textrow h6 {
@@ -1667,8 +1673,13 @@ p {
 .home__textsingle p {
   position: relative;
   padding-bottom: 15px;
-  min-height: 135px;
+  min-height: 120px;
   max-height: 135px;
+}
+@media screen and (min-width: 1600px) {
+  .home__textsingle p {
+    min-height: 100px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .home__textsingle p {
@@ -1706,6 +1717,10 @@ p {
   .home__bg-textcontent .home__bg-left {
     width: 100%;
   }
+}
+.home__bg-textcontent .home__bg-left img {
+  width: 354px;
+  height: 380px;
 }
 @media screen and (max-width: 1024px) {
   .home__bg-textcontent .home__bg-left img {
@@ -1757,6 +1772,8 @@ p {
   font-weight: bold;
   font-size: 12px;
   padding: 7px 30px;
+  width: 200px;
+  height: 30px;
 }
 .home__bg-textcontent .home__bg-right .btn-content:hover {
   background-color: #ffffff;
@@ -1930,6 +1947,15 @@ p {
   background-size: cover;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .intro__row {
+    width: 90%;
+  }
+
+  .home__designfeatures .home__designcontent p {
+    min-height: 150px;
+  }
+}
 .contact__container {
   background-color: #EDE9DF;
 }
@@ -2004,7 +2030,8 @@ p {
   margin: 0 6px;
 }
 
-select, select.error {
+select,
+select.error {
   background: transparent;
   border: none;
   border-bottom: 1px solid #362126;
@@ -2080,20 +2107,17 @@ select ~ label {
   position: initial;
 }
 
-.msgBox textarea:focus ~ .form-label,
-.msgBox textarea.has-value ~ .form-label, .msgBox textarea:valid ~ label {
-  top: -10px;
-}
-
 .msgBox textarea {
   height: 72px;
 }
 
 .msgBox .form-label {
-  top: 35px;
+  top: 0px;
+  font-size: 14px;
 }
 
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
@@ -2122,6 +2146,15 @@ input:valid ~ label {
   top: -20px;
   font-size: 10px;
   color: #362126;
+}
+
+textarea:focus ~ label {
+  top: -20px !important;
+  font-size: 10px !important;
+}
+
+textarea:valid ~ label {
+  top: -10px !important;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -2227,6 +2260,8 @@ input:-webkit-autofill {
   letter-spacing: 0.96px;
   text-transform: uppercase;
   padding: 3px 30px !important;
+  min-width: 119px;
+  height: 30px;
 }
 @media screen and (max-width: 1024px) {
   .submit__btn {
@@ -2334,7 +2369,8 @@ a.backtotop:hover::after {
   outline: #fff;
 }
 
-.contact_formsubs input:focus ~ label, .contact_formsubs input:valid ~ label {
+.contact_formsubs input:focus ~ label,
+.contact_formsubs input:valid ~ label {
   top: 0;
   font-size: 12px;
 }
@@ -2348,7 +2384,8 @@ a.backtotop:hover::after {
     margin-bottom: 24px;
   }
 
-  .contact_formsubs input:focus ~ label, .contact_formsubs input:valid ~ label {
+  .contact_formsubs input:focus ~ label,
+  .contact_formsubs input:valid ~ label {
     top: 0 !important;
     font-size: 11px !important;
   }
@@ -2458,6 +2495,14 @@ option {
 .gm-style-iw-d {
   overflow: auto !important;
   padding: 0px;
+}
+
+.contact__row {
+  align-items: center;
+}
+
+.contactFormPhone:focus + .flag-icon {
+  display: block;
 }
 
 .btn__watchvideo {
@@ -2662,7 +2707,7 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .home__designfeatures {
-  background: #2b1a1edb;
+  background: #362126;
   position: relative;
 }
 @media screen and (max-width: 1024px) {
@@ -2711,7 +2756,7 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .home__designtitle {
-  font-family: "Neue Haas Grotesk Display Pro";
+  font-family: "Area";
   font-size: 80px;
   font-style: normal;
   font-weight: 100;
@@ -2749,6 +2794,7 @@ circle {
 
 .tab-content {
   position: absolute;
+  z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
@@ -2863,9 +2909,6 @@ circle {
   object-fit: cover;
 }
 
-.popup__content {
-  height: 20%;
-}
 @media screen and (max-width: 1024px) {
   .popup__content {
     height: 100%;
